@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+#main-layout {
+    color: rgb(var(--foreground-rgb));
+    background: conic-gradient( from 180deg at 50% 50%, #1e1b4b 0deg, #1e1b4b 195deg, #1e3a8a 221.25deg, #1e2968 253.13deg, #1e1b4b 360deg);
+}
