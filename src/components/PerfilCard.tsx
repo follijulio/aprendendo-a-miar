@@ -1,3 +1,5 @@
+import React from 'react';
+import 'tailwindcss/tailwind.css';
 interface perfilProps {
   nickName: string;
   nome: string;
@@ -7,7 +9,7 @@ interface perfilProps {
   bio: string;
 }
 
-const Perfil: React.FC<perfilProps> = ({
+const PerfilCard: React.FC<perfilProps> = ({
   idade,
   imageLink,
   nickName,
@@ -74,6 +76,6 @@ const Perfil: React.FC<perfilProps> = ({
     </div>
   );
 };
-export default Perfil;
+export default PerfilCard;
 /*
  */

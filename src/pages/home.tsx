@@ -1,13 +1,13 @@
-import Perfil from "@/components/PerfilCard";
-import { perfil } from "@/mock/perfil";
-import { link } from "fs";
-import Image from "next/image";
-import Link from "next/link";
-export default function Home() {
+import { perfil } from "../mock/perfil";
+import 'tailwindcss/tailwind.css';
+import React from "react";
+import PerfilCard from "../components/PerfilCard";
+
+const TelaPerfil: React.FC = () => {
   return (
     <div className="h-screen bg-[#0b062d]">
       <div className="p-20">
-        <Perfil
+        <PerfilCard
           nickName={perfil.nickName}
           nome={perfil.nome}
           imageLink={perfil.foto}
@@ -18,6 +18,5 @@ export default function Home() {
       </div>
     </div>
   );
-}
-/*
- */
+};
+export default TelaPerfil;
