@@ -77,5 +77,3 @@ const PerfilCard: React.FC<perfilProps> = ({
   );
 };
 export default PerfilCard;
-/*
- */
