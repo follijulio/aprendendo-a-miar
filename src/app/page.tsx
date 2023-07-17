@@ -1,23 +1,12 @@
-import Perfil from "@/components/PerfilCard";
-import { perfil } from "@/mock/perfil";
-import { link } from "fs";
-import Image from "next/image";
+import BoxText from "@/components/CardButton";
 import Link from "next/link";
+import { textos } from "@/mock/textos";
 export default function Home() {
   return (
-    <div className="h-screen bg-[#0b062d]">
-      <div className="p-20">
-        <Perfil
-          nickName={perfil.nickName}
-          nome={perfil.nome}
-          imageLink={perfil.foto}
-          idade={perfil.idade}
-          bio={perfil.bio}
-          link={perfil.link}
-        />
+    <Link href={"/home"}>
+      <div className="h-screen w-screen flex justify-center items-center">
+        <button className="border rounded-xl p-9">APERTE PARA ENTRAR EM MEU SITE</button>
       </div>
-    </div>
+    </Link>
   );
 }
-/*
- */
