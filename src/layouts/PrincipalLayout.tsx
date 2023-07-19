@@ -7,22 +7,14 @@ interface LayoutProps {
 
 const LayoutPrincipal: React.FC<LayoutProps> = ({ children, texto }) => {
   return (
-    <div className="h-screen w-screen bg-gradient-to-r from-[#1a0243] via-[#13024d] to-[#1a0368] text-blue-400">
+    <div className="h-screen w-screen bg-gradient-to-t from-[rgb(20,0,53)] via-[#13024d] to-[#1a0368] text-blue-400">
       <div className="pt-10">
-        {texto ? (
-          <div className="font-bold font-mono text-5xl text-center">
-            {texto}
-          </div>
-        ) : (
-          <Link href="/home">
-            <div className="font-bold font-mono text-5xl text-center">
-              SITE DO JUJU
-            </div>
-          </Link>
-        )}
-
-        <div id="" className="h-full w-full overflow-y-scroll p-6">
+        <div className="font-bold text-6xl text-center">
+          {texto || <Link href="/home">SITE DO JUJU</Link>}
+        </div>
+        <div className="h-full w-full overflow-y-scroll p-6">
           {children}
+          <div className="bg-black"></div>
         </div>
       </div>
     </div>
