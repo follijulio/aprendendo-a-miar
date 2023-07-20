@@ -9,11 +9,6 @@ interface LayoutProps {
 }
 
 const LayoutPrincipal: React.FC<LayoutProps> = ({ children, texto, navBar }) => {
-  const [menu, setMenu] = useState(true);
-  const handleClick = () => {
-
-    setMenu(!menu);
-  };
   return (
     <div className="h-screen w-screen bg-gradient-to-t from-[rgb(20,0,53)] via-[#13024d] to-[#1a0368] text-blue-400">
       <div className="h-full w-full overflow-y-scroll p-6">
@@ -33,17 +28,9 @@ const LayoutPrincipal: React.FC<LayoutProps> = ({ children, texto, navBar }) => 
               </button>
             </Link>
           </div>
-          <div className="text-center">
-            <button onClick={handleClick}>
-              <div></div>
-
-            </button>
-          </div>
-
+          <div></div>
         </nav> : <div></div>
-
         }
-
         {children}
       </div >
     </div >
