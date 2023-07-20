@@ -5,10 +5,10 @@ import LayoutPrincipal from "@/layouts/PrincipalLayout";
 import {botoes} from "@/mock/telaInicial";
 const home: React.FC = () => {
   return (
-    <LayoutPrincipal texto="BEM VINDO">
+    <LayoutPrincipal navBar={true}>
       <div className="text-center"></div>
       <main>
-        <section className="flex flex-wrap pt-10" id="botões">
+        <section className="flex flex-wrap justify-around" id="botões">
           {botoes.map((botao) => {
             return (
               <CardButton
