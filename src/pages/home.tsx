@@ -5,7 +5,7 @@ import LayoutPrincipal from "@/layouts/PrincipalLayout";
 import {botoes} from "@/mock/telaInicial";
 const home: React.FC = () => {
   return (
-    <LayoutPrincipal navBar={true}>
+    <LayoutPrincipal navBar={true} foto={true}>
       <div className="text-center"></div>
       <main>
         <section className="flex flex-wrap justify-around" id="botões">
