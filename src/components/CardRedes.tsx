@@ -22,23 +22,3 @@ const CardFeitos: React.FC<FeitosProps> = ({ icon, text, link, para }) => {
     );
 };
 export default CardFeitos;
-/*
-// SeuComponente.tsx (ou .jsx, dependendo do arquivo de extensão)
-
-import React from 'react';
-
-const SeuComponente: React.FC = () => {
-  return (
-    <div className="w-64 h-64 bg-gray-200 p-4 relative">
-      <img
-        src="/caminho/para/sua/imagem.jpg"
-        alt="Descrição da imagem"
-        className="w-full h-full object-cover fade-out"
-      />
-    </div>
-  );
-};
-
-export default SeuComponente;
-
-*/

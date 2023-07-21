@@ -23,19 +23,3 @@ const feitos: React.FC = () => {
   );
 };
 export default feitos;
-/*
-
-      <div className="flex justify-between">
-
-        {redes.map((opcoes) => {
-          return (
-            <CardFeitos
-              key={opcoes.text}
-              icon={opcoes.icon}
-              text={opcoes.text}
-              link={opcoes.link}
-            />
-          );
-        })};
-      </div>
-*/
