@@ -1,19 +1,33 @@
 import Link from "next/link";
+import { useState } from "react";
 
 interface CardProps {
   text: string;
   rota?: string;
   foto?: string;
-  fora?: string;
 }
-const Card: React.FC<CardProps> = ({ text, rota, foto, fora }) => {
+const Card: React.FC<CardProps> = ({ text, rota, foto }) => {
+  const [mensagem, setMesagem] = useState(false);
+
+  const mouseEnter = () => {
+    setMesagem(true);
+  };
+
+  const mouseLeave = () => {
+    setMesagem(false);
+  };
   return (
-    <Link href={rota || "#"}>
-      <div className="border-2 rounded-lg border-sky-600 h-40 w-[29.125rem] p-2 m-2">
-        <div className="flex justify-center">
-          <img className="h-10 rounded-lg" src={foto} />
+    <Link className="transition-transform transform-gpu hover:scale-105" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} href={rota || ""}>
+      <div className="border-2 rounded-lg border-sky-400  w-80 h-36 m-5 flex justify-center items-center flex-col">
+        <div>
+          <img className="h-12" src={foto} alt="" />
         </div>
-        <p className=" text-4xl text-center">{text}</p>
+        <div>
+          <span className="text-6xl text-blue-400" id="font-VT323">
+            {text}
+          </span>
+        </div>
+        {mensagem ? <p className="text-blue-400 text-center " id="font-VT323">esse botão leva para: {text}</p> : <></>}
       </div>
     </Link>
   );
