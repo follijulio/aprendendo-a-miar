@@ -18,12 +18,12 @@ const LayoutCard: React.FC<CardProps> = ({ link, children, textMensagem }) => {
     };
     return (
         <Link onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} href={link}>
-            <div className="border-4 border-sky-700 rounded-3xl h-52 w-96 transition-transform transform-gpu hover:scale-105 shadow-lg hover:shadow-sky-400">
+            <div className="border-4 border-sky-700 rounded-3xl h-52 w-96 transition-transform transform-gpu hover:scale-105 shadow-lg hover:shadow-sky-400 m-4">
                 <div className="justify-center items-center flex-col">
                     {children}
                 </div>
                 <div className="text-xl font-bold text-center text-blue-400" id="font-VT323">
-                    {mensagem ? <p>{textMensagem}</p> : <p>{mensagem}</p>}
+                    {mensagem ? <p>{textMensagem}</p> : <span></span>}
                 </div>
             </div>
 

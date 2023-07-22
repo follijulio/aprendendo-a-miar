@@ -16,13 +16,11 @@ const Card: React.FC<CardProps> = ({ text, rota, foto, para }) => {
           <div>
             <img className="h-14" src={foto} alt="" />
           </div>
-      <div>
-            <p id="font-VT323" className="text-6xl text-blue-400">{text}</p>
+          <div>
+            <p id="font-VT323" className="text-6xl text-blue-400 text-center">{text}</p>
           </div>
         </div>
-        
       </LayoutCard>
-    
   );
 };
 export default Card;
