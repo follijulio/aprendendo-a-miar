@@ -9,8 +9,8 @@ const NavBar: React.FC<navBarProps> = ({ fotos }) => {
                 (<div className="text-center">
                     <div className="flex justify-between" id="bloco das imagens">
                         <div>
-                            <Link href={"https://github.com/netuno14"}>
-                                <img src="http://github.com/netuno14.png" className="object-cover h-14 rounded-full hover:border-2 border-sky-400 transition-transform transform-gpu hover:scale-110" alt="" />
+                            <Link href={"https://github.com/folli14"}>
+                                <img src="http://github.com/folli14.png" className="object-cover h-14 rounded-full hover:border-2 border-sky-400 transition-transform transform-gpu hover:scale-110" alt="" />
                             </Link>
                         </div>
                         <div>

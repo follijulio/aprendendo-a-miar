@@ -39,8 +39,8 @@ const usuario = {
   nome: "Júlio César",
   nickName: "Netuno",
   idade: "16",
-  foto: "https://github.com//NETUNO14.png",
-  link: "https://github.com//NETUNO14",
+  foto: "https://github.com//folli14.png",
+  link: "https://github.com//folli14",
   bio: "Estudante de TI no Instituto Federal de Alagoas (IFAL)",
   escola: "IFAL"
 };

@@ -8,7 +8,7 @@ const redes = [
   {
     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968866.png",
     text: "GITHUB",
-    link: "https://github.com/netuno14",
+    link: "https://github.com/folli14",
     para: "Esse botão leva para o github"
   },
   {
