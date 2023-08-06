@@ -1,6 +1,7 @@
 import Bloc from "@/components/Bloc";
 import Card from "@/components/CardButton";
 import LayoutPrincipal from "@/layouts/PrincipalLayout";
+
 const estudo = [
   {
     img: "https://camo.githubusercontent.com/bdedcbc949feefecc3ff98f7e655ee8151b522e2f32196c648620f5366d909d5/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f7461696c77696e646373732f7461696c77696e646373732d706c61696e2e737667"
@@ -57,10 +58,7 @@ const telaperfil: React.FC = () => {
                 </div>
                 <div className="flex flex-col px-3">
                   <p className="text-4xl text-blue-400" id="font-VT323">
-                    Nome:
-                  </p>
-                  <p className="text-4xl text-blue-400" id="font-VT323">
-                    {usuario.nome}
+                    Nome: {usuario.nome}
                   </p>
                   <p className="text-4xl text-blue-400" id="font-VT323">
                     idade: {usuario.idade}
