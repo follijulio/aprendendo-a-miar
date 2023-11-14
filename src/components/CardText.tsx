@@ -1,11 +1,13 @@
-interface CardTextProps {
-    text: string
+interface CardTextProps{
+    text: String;
 }
-const CardText: React.FC<CardTextProps> = ({ text}) => {
+const CardText: React.FC<CardTextProps> = ({text}) => {
     return (
-        <section className="border-2 border-[#281077] bg-[#1c0a56] rounded-xl p-4 transition-transform transform-gpu hover:scale-105">
-            <p className="text-slate-300 text-justify">{text}</p>
-        </section>
+        <div className="h-52 w-96 border-2 border-sky-300 shadow-2xl shadow-sky-300">
+            <p className="text- xl">
+                {text}
+            </p>
+        </div>
     );
 };
 export default CardText;
