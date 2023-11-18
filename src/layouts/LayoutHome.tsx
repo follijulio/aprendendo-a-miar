@@ -6,14 +6,14 @@ import { netuno } from "@/mock/netuno";
 import { textos } from "@/mock/textos";
 import CardText from "@/components/CardText";
 
-interface layoutHomeProps{
+interface layoutHomeProps {
     children: React.ReactNode;
 }
 
-const LayoutHome: React.FC<layoutHomeProps> = ({children}) =>{
+const LayoutHome: React.FC<layoutHomeProps> = ({ children }) => {
 
 
-const [time, setTime] = useState(true);
+    const [time, setTime] = useState(true);
     useEffect(() => {
         const duration = 2000;
         const cont = setTimeout(() => {
@@ -38,6 +38,15 @@ const [time, setTime] = useState(true);
         }, duration);
         return () => clearTimeout(cont);
     }, []);
+    const [timeFour, setTimeFour] = useState(true);
+    useEffect(() => {
+        const duration = 2100;
+        const cont = setTimeout(() => {
+            setTimeFour(false);
+        }, duration);
+        return () => clearTimeout(cont);
+    }, []);
+
     const [showMain, setShowMain] = useState(false);
     useEffect(() => {
         const mainTransitionDelay = 6500;
@@ -53,25 +62,25 @@ const [time, setTime] = useState(true);
     }, []);
 
 
-    
+
     return (
         <LayoutPrincipal>
             <nav>
-                {time ? <div></div> : <NavBar />}
+                {timeFour ? <div></div> : <NavBar />}
             </nav>
-                <div className="flex justify-center p-6">
-                    <img
-                        src={netuno.fotoRosto}
-                        className={time ? 'h-52' : 'rounded-full transition-all duration-1000 h-32'}
-                        id="foto-arredondada"
-                    />
-                </div>
+            <div className="flex justify-center p-6">
+                <img
+                    src={netuno.fotoRosto}
+                    className={time ? 'h-52' : 'rounded-full transition-all duration-1000 h-32'}
+                    id="foto-arredondada"
+                />
+            </div>
             <div>
                 <div className="flex justify-center">
                     {time ? (
                         <div className="font-bold text-4xl text-white">
-                            {timeThree? <span>BEM VINDO</span> : <Maquina text="BEM VINDO" escrever={false} />}
-                            
+                            {timeThree ? <span>BEM VINDO</span> : <Maquina text="BEM VINDO" escrever={false} />}
+
                         </div>
                     ) : (
                         <div className='font-bold text-4xl text-white miau'>
@@ -90,11 +99,11 @@ const [time, setTime] = useState(true);
                                         <CardText key={text.titulo} text={text.text} link={text.link} />
                                     )
                                 })}
-                                
+
                             </div>
                         </section>
                         <div>
-                        {children}
+                            {children}
                         </div>
                     </main>
                 )}
