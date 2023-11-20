@@ -1,41 +1,83 @@
-import Link from "next/link"
-interface navBarProps {
-    fotos: boolean;
-}
-const NavBar: React.FC<navBarProps> = ({ fotos }) => {
+import { netuno } from "@/mock/netuno";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+const opcoesMenu = [
+    {
+        nome: "Sobre",
+        url: "/sobre",
+        icon: "https://cdn-icons-png.flaticon.com/512/4210/4210462.png"
+    },
+    {
+        nome: "Projetos",
+        url: "/projetos",
+        icon: "https://cdn-icons-png.flaticon.com/512/1087/1087902.png"
+    },
+    {
+        nome: "Contatos",
+        url: "/contatos",
+        icon: "https://icons.veryicon.com/png/o/object/material_design/contacts-63.png"
+    },
+]
+const NavBar: React.FC = () => {
+    const [time, setTime] = useState(true);
+    useEffect(() => {
+        const duration = 100;
+        const cont = setTimeout(() => {
+            setTime(false);
+        }, duration);
+        return () => clearTimeout(cont);
+    }, []);
+    const [timeTwo, setTimeTwo] = useState(true);
+    useEffect(() => {
+        const duration = 200;
+        const cont = setTimeout(() => {
+            setTimeTwo(false);
+        }, duration);
+        return () => clearTimeout(cont);
+    }, []);
+
     return (
-        <nav className="border-4 border-sky-700 h-32 rounded-3xl items-center text-blue-400 p-2 ">
-            {fotos ?
-                (<div className="text-center">
-                    <div className="flex justify-between" id="bloco das imagens">
-                        <div>
-                            <Link href={"https://github.com/folli14"}>
-                                <img src="http://github.com/folli14.png" className="object-cover h-14 rounded-full hover:border-2 border-sky-400 transition-transform transform-gpu hover:scale-110" alt="" />
-                            </Link>
-                        </div>
-                        <div>
-                            <Link href={"/netunoPage"}>
-                                <img src="https://cdn-icons-png.flaticon.com/512/2530/2530911.png" className="object-cover h-14 rounded-full hover:border-2 border-sky-400 transition-transform transform-gpu hover:scale-110" alt="" />
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="transition-transform transform-gpu hover:scale-105" id="bloco de texto">
-                        <Link href={"/home"}>
-                            <span id="font-VT323" className="text-6xl">SITE DO JUJU</span>
-                        </Link>
-                    </div>
-                </div>
-                ) : (
-                    <div className="text-center">
-                        <div className="transition-transform transform-gpu hover:scale-105" id="bloco de texto">
+        <div>
+            {time ? (<div></div>) : (
+                <header className={timeTwo ? "h-0" : "transition-all duration-700 h-20 w-full flex items-center justify-between p-4 bg-fundo-nav rounded-b-lg"}>
+                    {timeTwo ? <div></div> :
+                        <div className="flex items-center w-full justify-between">
                             <Link href={"/home"}>
-                                <span id="font-VT323" className="text-6xl">SITE DO JUJU</span>
+                                <div>
+                                    <img src={netuno.netunoIcon} alt={"NETUNO"} className="h-16" />
+                                </div>
                             </Link>
+                            <div className="flex items-center gap-x-6">
+                                {opcoesMenu.map((opcoes) => {
+                                    return (
+                                        <div key={opcoes.nome}>
+                                            <Link href={opcoes.url} className="flex">
+                                                <img src={opcoes.icon} alt={opcoes.nome} className="h-6 mx-2" />
+                                                <p className="text-base text-gray-300">
+                                                    {opcoes.nome}
+                                                </p>
+                                            </Link>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+
                         </div>
-                    </div>
-                )
-            }
-        </nav >
-    )
-}
+                    }
+
+                </header>
+            )}
+        </div>
+    );
+};
 export default NavBar;
+/*
+sobre
+
+
+projetos
+https://cdn-icons-png.flaticon.com/512/1087/1087902.png
+
+contato
+
+*/
