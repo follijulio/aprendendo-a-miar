@@ -1,6 +1,7 @@
 import { netuno } from "@/mock/netuno";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 const opcoesMenu = [
     {
         nome: "Sobre",
@@ -44,7 +45,7 @@ const NavBar: React.FC = () => {
                         <div className="flex items-center w-full justify-between">
                             <Link href={"/home"}>
                                 <div>
-                                    <img src={netuno.netunoIcon} alt={"NETUNO"} className="h-16" />
+                                    <Image src={netuno.netunoIcon} alt={"NETUNO"} className="h-16" />
                                 </div>
                             </Link>
                             <div className="flex items-center gap-x-6">
@@ -52,7 +53,7 @@ const NavBar: React.FC = () => {
                                     return (
                                         <div key={opcoes.nome}>
                                             <Link href={opcoes.url} className="flex">
-                                                <img src={opcoes.icon} alt={opcoes.nome} className="h-6 mx-2" />
+                                                <Image src={opcoes.icon} alt={opcoes.nome} className="h-6 mx-2" />
                                                 <p className="text-base text-gray-300">
                                                     {opcoes.nome}
                                                 </p>
@@ -61,23 +62,11 @@ const NavBar: React.FC = () => {
                                     );
                                 })}
                             </div>
-
                         </div>
                     }
-
                 </header>
             )}
         </div>
     );
 };
 export default NavBar;
-/*
-sobre
-
-
-projetos
-https://cdn-icons-png.flaticon.com/512/1087/1087902.png
-
-contato
-
-*/

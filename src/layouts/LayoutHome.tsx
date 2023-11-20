@@ -5,7 +5,7 @@ import { Maquina } from "@/components/Maquina";
 import { netuno } from "@/mock/netuno";
 import { textos } from "@/mock/textos";
 import CardText from "@/components/CardText";
-
+import Image from "next/image";
 interface layoutHomeProps {
     children: React.ReactNode;
 }
@@ -69,10 +69,11 @@ const LayoutHome: React.FC<layoutHomeProps> = ({ children }) => {
                 {timeFour ? <div></div> : <NavBar />}
             </nav>
             <div className="flex justify-center p-6">
-                <img
+                <Image
                     src={netuno.fotoRosto}
                     className={time ? 'h-52' : 'rounded-full transition-all duration-1000 h-32'}
                     id="foto-arredondada"
+                    alt={"netuno"}
                 />
             </div>
             <div>
