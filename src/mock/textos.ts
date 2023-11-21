@@ -15,5 +15,10 @@ const textos = [
     eLink: true,
     link: "/estudos"
   },
+  {
+    titulo: "miau",
+    text: "ATÉ O MOMENTO, ESSE SITE ESTÁ EM PROGRESSO, OU SEJA, AINDA ESTÁ SENDO FEITO",
+    eLink: false,
+  },
 ];
 export { textos };
