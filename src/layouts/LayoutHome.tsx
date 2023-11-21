@@ -69,7 +69,7 @@ const LayoutHome: React.FC<layoutHomeProps> = ({ children }) => {
                 {timeFour ? <div></div> : <NavBar />}
             </nav>
             <div className="flex justify-center p-6">
-                <Image
+                <img
                     src={netuno.fotoRosto}
                     className={time ? 'h-52' : 'rounded-full transition-all duration-1000 h-32'}
                     id="foto-arredondada"
