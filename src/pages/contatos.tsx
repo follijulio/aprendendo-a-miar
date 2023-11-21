@@ -19,7 +19,7 @@ const contatos: React.FC = () => {
     return (
         <LayoutPrincipal>
             <div className="h-full w-full flex justify-center items-center">
-
+                IN PROGRESS
             </div>
         </LayoutPrincipal>
     );

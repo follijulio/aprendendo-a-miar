@@ -3,7 +3,7 @@ import LayoutPrincipal from "@/layouts/PrincipalLayout";
 const estudos: React.FC = () => {
     return (
         <LayoutPrincipal>
-            MIAU
+            IN PROGRESS
         </LayoutPrincipal>
     );
 };

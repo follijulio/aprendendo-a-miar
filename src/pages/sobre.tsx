@@ -4,10 +4,10 @@ import LayoutPrincipal from "@/layouts/PrincipalLayout";
 const sobre: React.FC = () => {
     return (
         <LayoutPrincipal>
-            <NavBar/>
+            <NavBar />
             <div className="text-9xl text-white">
                 <p>
-                    {"Hello, World!!"}
+                    IN PROGRESS
                 </p>
             </div>
         </LayoutPrincipal>
