@@ -42,7 +42,7 @@ export function Maquina(props: MaquinaProps) {
   }, [props.text, props.escrever]);
 
   return (
-  <p>
+  <p className="font-bold text-white">
     {text}
   </p>
     );
