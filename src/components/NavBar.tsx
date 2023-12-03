@@ -40,21 +40,23 @@ const NavBar: React.FC = () => {
     return (
         <div>
             {time ? (<div></div>) : (
-                <header className={timeTwo ? "h-0" : "transition-all duration-700 h-20 w-full flex items-center justify-between p-4 bg-fundo-nav rounded-b-lg"}>
+                <header className={timeTwo ? "h-0" : "transition-all duration-700 h-20 w-full flex items-center justify-between p-4 bg-gradient-to-t from-black/75 via-black/90 to-black/100 rounded-b-lg"}>
                     {timeTwo ? <div></div> :
                         <div className="flex items-center w-full justify-between">
-                            <Link href={"/home"}>
+                            <Link href={"/home"} className="flex items-center">
                                 <div>
-                                    <img src={netuno.netunoIcon} alt={"NETUNO"} className="h-16" />
+                                    <img src={netuno.netunoIcon} alt={"NETUNO"} className="h-16 object-cover" />
                                 </div>
                             </Link>
                             <div className="flex items-center gap-x-6">
                                 {opcoesMenu.map((opcoes) => {
                                     return (
                                         <div key={opcoes.nome}>
-                                            <Link href={opcoes.url} className="flex">
-                                                <img src={opcoes.icon} alt={opcoes.nome} className="h-6 mx-2" />
-                                                <p className="text-base text-gray-300">
+                                            <Link href={opcoes.url} className="flex items-center">
+                                                <div className="flex justify-center h-8 w-8 items-center bg-white rounded-full">
+                                                    <img src={opcoes.icon} alt={opcoes.nome} className="h-6 mx-2 object-cover" />
+                                                </div>
+                                                <p className="px-1 text-base font-semibold text-gray-300">
                                                     {opcoes.nome}
                                                 </p>
                                             </Link>
