@@ -8,9 +8,10 @@ import CardText from "@/components/CardText";
 import Image from "next/image";
 interface layoutHomeProps {
     children: React.ReactNode;
+    durationNav: number;
 }
 
-const LayoutHome: React.FC<layoutHomeProps> = ({ children }) => {
+const LayoutHome: React.FC<layoutHomeProps> = ({ children , durationNav }) => {
 
 
     const [time, setTime] = useState(true);
@@ -40,7 +41,7 @@ const LayoutHome: React.FC<layoutHomeProps> = ({ children }) => {
     }, []);
     const [timeFour, setTimeFour] = useState(true);
     useEffect(() => {
-        const duration = 2100;
+        const duration = durationNav;
         const cont = setTimeout(() => {
             setTimeFour(false);
         }, duration);
@@ -71,7 +72,7 @@ const LayoutHome: React.FC<layoutHomeProps> = ({ children }) => {
             <div className="flex justify-center p-6">
                 <img
                     src={netuno.fotoRosto}
-                    className={time ? 'h-52' : 'rounded-full transition-all duration-1000 h-32'}
+                    className={time ? 'h-52' : 'rounded-full transition-all duration-1000 h-32 object-cover'}
                     id="foto-arredondada"
                     alt={"netuno"}
                 />
