@@ -2,7 +2,7 @@ import LayoutHome from '@/layouts/LayoutHome';
 
 const Home: React.FC = () => {
     return (
-        <LayoutHome>
+        <LayoutHome durationNav={2100}>
             <div>
                 
             </div>
