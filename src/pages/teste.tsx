@@ -3,7 +3,7 @@ import LayoutPrincipal from "@/layouts/PrincipalLayout";
 const teste: React.FC = () =>{
     return(
         <LayoutPrincipal>
-            m
+            PAGE TESTE
         </LayoutPrincipal>
     )
 
