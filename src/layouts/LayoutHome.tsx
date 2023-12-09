@@ -1,18 +1,16 @@
-import { Children, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import LayoutPrincipal from "./PrincipalLayout";
 import NavBar from "@/components/NavBar";
 import { Maquina } from "@/components/Maquina";
 import { netuno } from "@/mock/netuno";
-import { textos } from "@/mock/textos";
-import CardText from "@/components/CardText";
-import Image from "next/image";
+
 interface layoutHomeProps {
     children: React.ReactNode;
     durationNav: number;
+    NavBarActive: boolean;
 }
 
-const LayoutHome: React.FC<layoutHomeProps> = ({ children , durationNav }) => {
-
+const LayoutHome: React.FC<layoutHomeProps> = ({ children, durationNav, NavBarActive }) => {
 
     const [time, setTime] = useState(true);
     useEffect(() => {
@@ -66,9 +64,15 @@ const LayoutHome: React.FC<layoutHomeProps> = ({ children , durationNav }) => {
 
     return (
         <LayoutPrincipal>
-            <nav>
-                {timeFour ? <div></div> : <NavBar />}
-            </nav>
+            {NavBarActive ?
+                <nav>
+                    {timeFour ? <div></div> : <NavBar />}
+                </nav>
+                :
+                <div>
+
+                </div>
+            }
             <div className="flex justify-center p-6">
                 <img
                     src={netuno.fotoRosto}
