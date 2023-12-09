@@ -39,6 +39,19 @@ const Sobre: React.FC = () => {
 };
 
 export default Sobre;
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 <div className="flex justify-center p-6">
                 <img

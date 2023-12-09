@@ -1,34 +1,37 @@
 import Link from "next/link";
 
+
 interface CardTextProps {
-    text?: string;
-    icon?: string;
-    link?: string;
-    eLink?: boolean;
+    text: string;
+    link? : string;
 }
 
-const CardText: React.FC<CardTextProps> = ({ text, icon, link, eLink }) => {
+const CardText: React.FC<CardTextProps> = ({ text, link}) => {
     return (
         <div>
-            {eLink ? (
-                <button>
-<Link href={link ? link : "#"}>
-                    <div className="h-52 w-96 border-2 border-sky-200 rounded-lg shadow-2xl shadow-sky-200 p-3 justify-center text-justify bg-slate-800">
-                        
-                            <p className="text-white font-medium font-mono">
-                                {text}
-                            </p>
-                        
-                    </div>
-</Link>
-                </button>
-            ) : (
-                <div className="h-52 w-96 border-2 border-sky-200 rounded-lg shadow-md shadow-sky-200 p-3 justify-center text-justify bg-slate-800">
-                    <p className="text-white font-medium font-mono">
-                        {text}
-                    </p>
+            {link ?
+                <div>
+                    <button>
+                        <Link href={link ? link : "#"}>
+                            <div>
+                                <div className="h-52 w-96 border-2 border-sky-200 rounded-lg shadow-md shadow-sky-200 p-3 justify-center text-justify bg-slate-800">
+                                    <p className="text-white font-medium font-mono">
+                                        {text}
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+                    </button>
                 </div>
-            )}
+                :
+                <div>
+                    <div className="h-52 w-96 border-2 border-sky-200 rounded-lg shadow-md shadow-sky-200 p-3 justify-center text-justify bg-slate-800">
+                        <p className="text-white font-medium font-mono">
+                            {text}
+                        </p>
+                    </div>
+                </div>
+            }
         </div>
     );
 };
