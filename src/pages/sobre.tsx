@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import CardChildren from "@/components/CardChildren";
 import CardImage from "@/components/CardImage";
 import { Maquina } from "@/components/Maquina";
 import NavBar from "@/components/NavBar";
@@ -28,7 +29,7 @@ const Sobre: React.FC = () => {
 
     }, []);
     return (
-        <LayoutPrincipal>
+        <LayoutPrincipal >
             {time ? <div></div> : <NavBar />}
             <div className="w-full flex justify-center">
                 <div className="flex flex-col items-center">
@@ -51,18 +52,20 @@ const Sobre: React.FC = () => {
                         <div className="flex justify-center items-center h-full">
                             <div className="flex flex-col">
                                 <div className="flex">
-                                    <CardImage rosto={true} imageLink="https://github.com/follijulio.png" texto="Olá! Sou Júlio César, um apaixonado por tecnologia e programação nascido em Alagoas em 2006. Desde cedo, meu fascínio por códigos e sites me levou a explorar o vasto mundo da programação." />
+                                    <CardImage rosto={true} imageLink="https://github.com/follijulio.png" texto="Olá! Sou Júlio César, um apaixonado por tecnologia e programação nascido em Alagoas. Desde cedo, meu fascínio por códigos e sites me levou a explorar o vasto mundo da programação." />
                                     <div>
-                                        <Card texto="Atualmente, estudo no Instituto Federal de Alagoas (IFAL), onde curso Informática. Iniciei minha jornada aos 14 anos, inspirado por vídeos online que despertaram minha paixão pela criação de sites e códigos. Dedico cerca de 8 horas diárias ao estudo e aprimoramento nessa área fascinante." />
-                                        <Card texto="Dedico meu tempo ao estudo e ao desenvolvimento constante. Com a bagagem do IFAL, busco explorar novos horizontes na área da informática. Cada linha de código é uma oportunidade de aprendizado, e estou ansioso para contribuir ainda mais para a comunidade tecnológica no futuro." />
+                                        <CardChildren>
+                                            Atualmente, estudo no <a href="https://www2.ifal.edu.br" className="underline decoration-dotted">Instituto Federal de Alagoas (IFAL)</a>, onde curso Informática. Iniciei minha jornada aos 14 anos, inspirado por vídeos online que despertaram minha paixão pela criação de sites e códigos. Dedico cerca de 8 horas diárias ao estudo e aprimoramento nessa área fascinante.
+                                        </CardChildren>
+                                        <CardChildren>
+                                            Dedico meu tempo ao estudo e ao desenvolvimento constante. Com a bagagem do <a href="https://www2.ifal.edu.br" className="underline decoration-dotted">IFAL</a>, busco explorar novos horizontes na área da informática. Cada linha de código é uma oportunidade de aprendizado, e estou ansioso para contribuir ainda mais para a comunidade tecnológica no futuro.
+                                        </CardChildren>
                                     </div>
                                 </div>
                                 <div className="flex">
                                     <div>
                                         <Card texto="Meus valores são simples, mas fundamentais para minha jornada. Acredito na honestidade, perseverança, alegria e calma como pilares essenciais para alcançar meus objetivos. Esses princípios orientam minha conduta tanto na vida quanto na programação." />
-                                        <a href="https://www2.ifal.edu.br">
-                                        <Card texto="INSTUTUTO FEDERAL DE ALAGOAS"/>
-                                        </a>
+                                        <Card texto="" />
                                     </div>
                                     <CardImage imageLink="https://www.amsterdam.net/en/wp-content/uploads/sites/136/johan-cruijff-arena-hd.jpg" texto="Meus sonhos vão além do código. Um deles é viajar para os Países Baixos e visitar a Johan Cruyff Arena, o estádio do AJAX. Cruyff, meu maior ídolo, deixou um legado inspirador no futebol, e esse estádio representa um marco significativo em sua carreira." />
                                 </div>
