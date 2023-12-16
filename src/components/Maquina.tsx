@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-type MaquinaProps = {
+interface MaquinaProps {
   text: string;
   escrever: boolean;
 };
