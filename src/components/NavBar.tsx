@@ -55,8 +55,8 @@ const NavBar: React.FC = () => {
                                     return (
                                         <div key={opcoes.nome}>
                                             <Link href={opcoes.url} className="flex items-center">
-                                                <div className="flex justify-center h-8 w-8 items-center bg-white rounded-full">
-                                                    <img src={opcoes.icon} alt={opcoes.nome} className="h-6 mx-2 object-cover" />
+                                                <div className="flex justify-center h-6 w-6 items-center bg-white rounded-full">
+                                                    <img src={opcoes.icon} alt={opcoes.nome} className="h-4 mx-2 object-cover" />
                                                 </div>
                                                 <p className="px-1 text-base font-semibold text-gray-300">
                                                     {opcoes.nome}
