@@ -1,4 +1,3 @@
-import Card from "@/components/Card";
 import CardChildren from "@/components/CardChildren";
 import CardImage from "@/components/CardImage";
 import { Maquina } from "@/components/Maquina";
@@ -64,8 +63,12 @@ const Sobre: React.FC = () => {
                                 </div>
                                 <div className="flex">
                                     <div>
-                                        <Card texto="Meus valores são simples, mas fundamentais para minha jornada. Acredito na honestidade, perseverança, alegria e calma como pilares essenciais para alcançar meus objetivos. Esses princípios orientam minha conduta tanto na vida quanto na programação." />
-                                        <Card texto="" />
+                                        <CardChildren>
+                                            Meus valores são simples, mas fundamentais para minha jornada. Acredito na honestidade, perseverança, alegria e calma como pilares essenciais para alcançar meus objetivos. Esses princípios orientam minha conduta tanto na vida quanto na programação
+                                        </CardChildren>
+                                        <CardChildren>
+                                            Meus valores são simples, mas fundamentais para minha jornada. Acredito na honestidade, perseverança, alegria e calma como pilares essenciais para alcançar meus objetivos. Esses princípios orientam minha conduta tanto na vida quanto na programação
+                                        </CardChildren>
                                     </div>
                                     <CardImage imageLink="https://www.amsterdam.net/en/wp-content/uploads/sites/136/johan-cruijff-arena-hd.jpg" texto="Meus sonhos vão além do código. Um deles é viajar para os Países Baixos e visitar a Johan Cruyff Arena, o estádio do AJAX. Cruyff, meu maior ídolo, deixou um legado inspirador no futebol, e esse estádio representa um marco significativo em sua carreira." />
                                 </div>
