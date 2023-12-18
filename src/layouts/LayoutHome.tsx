@@ -76,8 +76,7 @@ const LayoutHome: React.FC<layoutHomeProps> = ({ children, durationNav, NavBarAc
             <div className="flex justify-center p-6">
                 <img
                     src={netuno.fotoRosto}
-                    className={time ? 'h-52' : 'rounded-full transition-all duration-1000 h-32 object-cover'}
-                    id="foto-arredondada"
+                    className={time ? 'h-52' : 'rounded-full transition-all duration-1000 h-32 object-cover image-move-efect'}
                     alt={"netuno"}
                 />
             </div>

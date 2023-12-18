@@ -35,8 +35,7 @@ const Sobre: React.FC = () => {
                     {timeTwo ?
                         <img
                             src={netuno.fotoRosto}
-                            className={time ? 'h-52 opacity-100' : 'py-4 rounded-full transition-all duration-1000 h-32 opacity-0'}
-                            id="foto-arredondada"
+                            className={time ? 'h-52 opacity-100 image-move-efect' : 'py-4 rounded-full transition-all duration-1000 h-32 opacity-0 image-move-efect'}
                             alt={"netuno"}
                         />
                         :
@@ -46,7 +45,6 @@ const Sobre: React.FC = () => {
                     <div className="text-6xl">
                         <Maquina text="Este é o Júlio" escrever={false} />
                     </div>
-                    {/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/}
                     <div className={timeTwo ? 'opacity-0' : 'transition-opacity duration-1000 opacity-100'}>
                         <div className="flex justify-center items-center h-full">
                             <div className="flex flex-col">
