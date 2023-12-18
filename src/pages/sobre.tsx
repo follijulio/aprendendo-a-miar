@@ -47,8 +47,8 @@ const Sobre: React.FC = () => {
                     </div>
                     <div className={timeTwo ? 'opacity-0' : 'transition-opacity duration-1000 opacity-100'}>
                         <div className="flex justify-center items-center h-full">
-                            <div className="flex flex-col">
-                                <div className="flex">
+                            <div className="flex flex-wrap lg:flex-col">
+                                <div className="lg:flex">
                                     <CardImage rosto={true} imageLink="https://github.com/follijulio.png" texto="Olá! Sou Júlio César, um apaixonado por tecnologia e programação nascido em Alagoas. Desde cedo, meu fascínio por códigos e sites me levou a explorar o vasto mundo da programação." />
                                     <div>
                                         <CardChildren>
@@ -59,7 +59,7 @@ const Sobre: React.FC = () => {
                                         </CardChildren>
                                     </div>
                                 </div>
-                                <div className="flex">
+                                <div className="lg:flex">
                                     <div>
                                         <CardChildren>
                                             Meus valores são simples, mas fundamentais para minha jornada. Acredito na honestidade, perseverança, alegria e calma como pilares essenciais para alcançar meus objetivos. Esses princípios orientam minha conduta tanto na vida quanto na programação
