@@ -1,6 +1,7 @@
 import CardChildren from "@/components/CardChildren";
 import CardImage from "@/components/CardImage";
 import LayoutHome from "@/layouts/LayoutHome";
+import useTime from "@/hooks/UseTime";
 import { useEffect, useState } from "react";
 
 const Sobre: React.FC = () => {
