@@ -1,11 +1,10 @@
 import Card from '@/components/Card';
-import CardText from '@/components/CardText';
 import LayoutHome from '@/layouts/LayoutHome';
 import { textos } from '@/mock/textos';
 
 const Home: React.FC = () => {
     return (
-        <LayoutHome durationNav={2100} NavBarActive={true}>
+        <LayoutHome durationNav={2100} NavBarActive={true} tempo={6000} texto_antes={"BEM VINDO(A)"} texto_depois={'MENU NOME É JÚLIO'} fotoInicial={true}>
             <div>
                 <section id="cards">
                     <div className="gap-y-6 gap-x-6 flex flex-wrap justify-evenly">
