@@ -3,7 +3,8 @@ import LayoutPrincipal from "./PrincipalLayout";
 import { Maquina } from "@/components/Maquina";
 import { netuno } from "@/mock/netuno";
 import useTime from "@/hooks/UseTime";
-import NavBar from "@/components/NavBar";
+import NavBar from "./NavBar";
+
 
 interface layoutHomeProps {
     children: React.ReactNode;
