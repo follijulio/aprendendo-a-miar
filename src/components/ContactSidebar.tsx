@@ -11,7 +11,7 @@ interface ContactProps {
 const ContactSidebar: React.FC<ContactProps> = ({ contacts }) => {
 
     return (
-        <div className="h-40 bg-gray-900 rounded-md flex flex-col items-center justify-center">
+        <div className="h-48 w-40 bg-gray-900 rounded-md flex flex-col items-center justify-center">
             {contacts.map(contact => (
                 <ContatoCard key={contact.titulo} link={contact.link} image={contact.image} titulo={contact.titulo}
                 />
