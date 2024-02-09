@@ -53,7 +53,7 @@ const LayoutHome: React.FC<layoutHomeProps> = ({ fotoInicial, children, duration
             {
                 fotoInicial ?
                     <div>
-                        <div className="flex justify-center p-6">
+                        <div className="flex justify-center p-6 mt-16">
                             <img
                                 src={netuno.fotoRosto}
                                 className={time ? 'h-52 image-move-efect' : 'rounded-full transition-all duration-1000 h-32 object-cover image-move-efect'}
