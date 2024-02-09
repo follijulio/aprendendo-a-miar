@@ -4,7 +4,7 @@ interface LayoutProps {
 const LayoutPrincipal: React.FC<LayoutProps> = ({ children}) => {
   return (
     <div className="h-screen w-screen" id="layout-principal">
-      <div className="h-full w-full overflow-y-scroll">
+      <div className="h-full w-full no-scrollbar overflow-y-scroll">
         {children}
       </div >
     </div >
