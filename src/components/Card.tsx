@@ -6,7 +6,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ texto, link }) => {
     return (
-        <div className="border-2 border-sky-500 shadow-md h-32 w-96 shadow-sky-500 rounded-md bg-transparent m-8">
+        <div className="border-2 border-sky-900 h-48 w-full rounded-md bg-transparent m-2">
             <div className=" p-2 indent-2 text-justify">
                 <p className="text-white">
                     {texto}
