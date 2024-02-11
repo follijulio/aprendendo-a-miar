@@ -7,7 +7,7 @@ interface CardProps {
 
 const CardImage: React.FC<CardProps> = ({ imageLink, texto, rosto }) => {
     return (
-        <div className="border-2 border-sky-500 shadow-md shadow-sky-500 rounded-2xl bg-transparent m-8">
+        <div className="border-2 border-sky-900  rounded-md bg-transparent m-8">
             <div className="h-80 flex justify-center items-center">
                 <div className="md:flex flex flex-wrap">
                     <div className="p-4 md:w-1/2 flex justify-center items-center w-full">
