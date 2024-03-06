@@ -1,4 +1,8 @@
 import { mavizinha } from "@/mock/mavizinha";
+import Image from "next/image";
+import mavi01 from "@/assets/imagens/img-mavi-nav.jpg"
+import mavi02 from "@/assets/imagens/img-mavi02.jpeg"
+import mavi03 from "@/assets/imagens/img-mavi03.jpeg"
 
 const mavi: React.FC = () => {
     return (
@@ -8,14 +12,20 @@ const mavi: React.FC = () => {
                     <div>
                         <img src="https://cdn-icons-png.flaticon.com/512/381/381804.png" alt="" className="h-8 w-8 object-cover" />
                     </div>
-                    <div>
-                        <h1 className="text-3xl font-sans font-bold">MAVIZINHA</h1>
+                    <div className="flex justify-around">
+                        <h1 className="text-2xl font-sans font-bold">MAVIZINHA</h1>
                     </div>
                     <div>
                         <img src="https://cdn-icons-png.flaticon.com/512/381/381804.png" alt="" className="h-8 w-8 object-cover" />
                     </div>
                 </nav>
                 <main className="">
+
+                    <section id="fotos" className="flex w-full h-20 items-center justify-around">
+                        <Image src={mavi01} alt="mavi-01" className="image-move-efect h-14 w-14"></Image>
+                        <Image src={mavi02} alt="mavi-01" className="-rotate-90   image-move-efect h-14 w-14"></Image>
+                        <Image src={mavi03} alt="mavi-01" className="image-move-efect h-14 w-14"></Image>
+                    </section>
                     <section className="flex flex-col justify-center">
                         {mavizinha.map((textinhos) => {
                             return (
@@ -33,7 +43,6 @@ const mavi: React.FC = () => {
                         </a>
                     </section>
                     <section>
-
                     </section>
                 </main>
             </div>
