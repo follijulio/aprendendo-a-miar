@@ -40,7 +40,7 @@ const NavBar: React.FC = () => {
     return (
         <div>
             {time ? (<div></div>) : (
-                <header className={timeTwo ? "h-0" : "fixed top-0 left-0 right-0 bg transition-all duration-700 h-16 w-full flex items-center justify-between p-4 bg-black rounded-b-lg shadow-lg shadow-slate-900"}>
+                <header className={timeTwo ? "h-0" : "fixed top-0 left-0 right-0 bg transition-all duration-700 h-16 w-full flex items-center justify-between p-4 bg-black rounded-b-lg shadow-md shadow-slate-900"}>
 
 
                     {timeTwo ? <div></div> :
