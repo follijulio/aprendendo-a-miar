@@ -6,8 +6,7 @@
   background-color: #1c1c1c;
 }
 
-
-.image-move-efect{
+.image-move-efect {
   border-radius: 74% 26% 53% 47% / 39% 42% 58% 61%;
   animation: mudar 8s ease-in-out infinite;
 }
@@ -58,7 +57,9 @@
   }
 }
 
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+.bg-mavi {
+  background: #f8a5c1;
 }
