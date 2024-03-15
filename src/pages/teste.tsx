@@ -5,7 +5,7 @@ const teste: React.FC = () =>{
     return(
        <LayoutPrincipal>
             <div className="h-full w-full flex justify-center items-center text-white">
-               TEM NADA NÃO, OTAAAAAAARIAAAA 😘
+               TEM NADA AINDA, OTAAAAAAARIAAAA 😘
             </div>
         </LayoutPrincipal>
 
