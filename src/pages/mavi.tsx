@@ -36,7 +36,7 @@ const mavi: React.FC = () => {
                         })}
                     </section>
                     <section className="flex m-4 justify-center">
-                        <a href="https://youtu.be/5pyk-DmkBsA?si=YkUVH87FfmGjHo6c&t=10">
+                        <a href="/testes">
                             <button className="bg-pink-400 text-xl font-semibold h-16 w-32 font-mono rounded-lg hover:shadow-lg hover:shadow-black hover:scale-105 hover:bg-black hover:text-pink-400 ease-in-out duration-200">
                                 clique aqui
                             </button>
