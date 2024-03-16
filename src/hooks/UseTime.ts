@@ -5,13 +5,17 @@ interface UseTimeoutOptions {
   onTimeout?: () => void;
 }
 
-const useTime = ({ duration, onTimeout }: UseTimeoutOptions): [boolean, () => void] => {
+const useTime = ({ duration,
+  
+  
+  
+  onTimeout }: UseTimeoutOptions): [boolean, () => void] => {
   const [time, setTime] = useState(true);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setTime(false);
-      
+
       onTimeout?.();
     }, duration);
 
