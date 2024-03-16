@@ -11,6 +11,7 @@ const useTime = ({ duration, onTimeout }: UseTimeoutOptions): [boolean, () => vo
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setTime(false);
+      
       onTimeout?.();
     }, duration);
 
