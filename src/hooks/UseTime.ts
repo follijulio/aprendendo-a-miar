@@ -14,6 +14,7 @@ const useTime = ({ duration, onTimeout }: UseTimeoutOptions): [boolean, () => vo
       onTimeout?.();
     }, duration);
 
+    
     return () => {
       clearTimeout(timeoutId);
       setTime(false);
