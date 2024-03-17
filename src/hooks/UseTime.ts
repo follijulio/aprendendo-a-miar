@@ -19,10 +19,6 @@ const useTime = ({ duration,
       onTimeout?.();
     }, duration);
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     return () => {
       clearTimeout(timeoutId);
       setTime(false);
